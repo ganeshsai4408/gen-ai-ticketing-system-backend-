@@ -15,7 +15,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://ai-ticket-system-frontend-nw7b.vercel.app', // 👈 Your Vercel frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/auth", userRoutes);
 app.use("/api/tickets", ticketRoutes);
