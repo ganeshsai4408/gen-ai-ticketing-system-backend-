@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: 'https://ai-ticket-system-frontend-nw7b.vercel.app', // 👈 Your Vercel frontend
+    origin: 'https://ai-ticket-system-frontend-nw7b-otqfx8qob.vercel.app/login', // 👈 Your Vercel frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
